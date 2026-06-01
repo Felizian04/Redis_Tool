@@ -5,7 +5,7 @@ import org.springframework.data.redis.core.RedisHash
 import java.time.Instant
 import kotlin.collections.mutableListOf
 
-@RedisHash("profileData")
+@RedisHash("profileData", timeToLive = 10)
 data class ProfileDataModel(
 	@Id val email: String,
 	val password: String,
